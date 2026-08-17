@@ -2,6 +2,7 @@ import numpy as np
 import opengate as gate
 from scipy.spatial.transform import Rotation as R
 import preconf.detector as detector
+from pathlib import Path
 
 PHANTOM = 'water'
 WATER_PHANTOM_THICKNESS = 160
@@ -51,7 +52,7 @@ sim.physics_manager.material_ionisation_potential['G4_WATER'] = 75 * eV
 #=================#
 # Materials       #
 #=================#
-sim.volume_manager.add_material_database('GateMaterials_v10.db')
+sim.volume_manager.add_material_database(str(Path(__file__).with_name('GateMaterials_v10.db')))
 
 # Setting up this PATH variable makes it possible to load files relative to the sub-modules like phantom or detector
 # /control/macroPath ./:phantoms/{PHANTOM}/:detectors/{DETECTOR}/:readouts/:visualize/:additional_material/
@@ -181,4 +182,3 @@ hits_calor.authorize_repeated_volumes = True
 
 sim.random_seed = 'auto'
 sim.run()
-
