@@ -1,6 +1,6 @@
 # Proton tomography simulation and data analysis (BSc Thesis)
 
-A Monte-Carlo simulation and data processing pipeline developed for my Computational Physics BSc thesis at Eötvös Loránd University. 
+A Monte-Carlo simulation and data processing pipeline developed for my Computational Physics BSc thesis at Eötvös Loránd University. This analysis was conducted in alignment with the research efforts of the international Bergen pCT collaboration.
 
 This project simulates proton-beam transport for medical physics and includes a complete analytical workflow to process, clean, and visualize the resulting large-scale detector signals.
 
